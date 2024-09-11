@@ -1,0 +1,12 @@
+services:
+
+  my-rabbitmq:
+    image: rabbitmq:3-management
+    restart: always
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      RABBITMQ_DEFAULT_USER: user
+      RABBITMQ_DEFAULT_PASS: pass
+      QUEUE_NAME: my-queue
