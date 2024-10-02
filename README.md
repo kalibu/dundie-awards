@@ -25,8 +25,10 @@ In the call, we will introduce new code to the application, and you will comment
 * Actuator: http://localhost:3000/actuator
 
 ## Run local
-1) before start the application, run docker-compose up to get rabbitmq up and running.
-2) Log into http://localhost:15672/
-    Username: user
-    Password: pass
-Create a queue called: queueAward
+1) docker-compose up
+2) .\gradlew bootRun
+
+## Run App Docker Local
+1) ./gradlew.bat clean build jar
+2) docker build -t dundie_awards .
+3) docker run -p 3000:3000 --network host dundie_awards

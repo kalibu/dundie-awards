@@ -1,6 +1,6 @@
 services:
 
-  my-rabbitmq:
+  my_rabbitmq:
     image: rabbitmq:3-management
     restart: always
     ports:
@@ -9,4 +9,12 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: user
       RABBITMQ_DEFAULT_PASS: pass
-      QUEUE_NAME: my-queue
+
+#  dundie_awards_front:
+#    build: .
+#    depends_on:
+#      - my_rabbitmq
+#    image: dundie_awards:latest
+#    restart: always
+#    ports:
+#      - 3000:3000

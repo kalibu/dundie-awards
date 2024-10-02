@@ -38,6 +38,7 @@ spring:
       cache:
         period: 0
   rabbitmq:
+#    host: my_rabbitmq
     host: localhost
     port: 5672
     username: user
